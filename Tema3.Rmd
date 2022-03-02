@@ -46,6 +46,11 @@ library(readr)
 f <- read_csv("owid-covid-data.csv")
 ```
 
+Seleccionamos los países que queremos
+```{r}
+s <- f[f$location == 'United States' | f$location == 'Italy' | f$location == 'France' | f$location == 'Germany' | f$location == 'Canada' | f$location == 'Japan' | f$location == 'United Kingdom' | f$location == 'Spain', ]
+```
+
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 
