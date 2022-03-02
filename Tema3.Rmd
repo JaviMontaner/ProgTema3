@@ -8,18 +8,18 @@ params:
   lang: ES
 lang: "`r switch(params$lang, ES = 'es-ES', EN = 'en-US')`"
 output:
-  html_notebook:
+  html_document:
     echo: yes
     number_sections: yes
+    theme: lumen
     toc: yes
   pdf_document:
     toc: yes
     toc_depth: 3
     number_sections: yes
-  html_document:
+  html_notebook:
     echo: yes
     number_sections: yes
-    theme: lumen
     toc: yes
 language:
   label:
@@ -36,7 +36,15 @@ language:
     proof: 'Demostración. '
     remark: 'Nota: '
     solution: 'Solución. '
+    
+
 ---
+Importamos el fichero
+```{r}
+library(readr)
+
+f <- read_csv("owid-covid-data.csv")
+```
 
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
