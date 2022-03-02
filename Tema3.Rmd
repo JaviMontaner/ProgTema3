@@ -51,6 +51,14 @@ Seleccionamos los países que queremos
 s <- f[f$location == 'United States' | f$location == 'Italy' | f$location == 'France' | f$location == 'Germany' | f$location == 'Canada' | f$location == 'Japan' | f$location == 'United Kingdom' | f$location == 'Spain', ]
 ```
 
+Creamos el grafico
+```{r}
+library(ggplot2)
+
+g <- ggplot(s, aes(x = date, y = new_deaths_smoothed_per_million, colour = location)) + geom_line()
+g
+```
+
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 
