@@ -58,6 +58,10 @@ library(ggplot2)
 g <- ggplot(s, aes(x = date, y = new_deaths_smoothed_per_million, colour = location)) + geom_line()
 g
 ```
+Guardamos el grafico
+```{r}
+ggsave(filename = 'Visualización de datos.pdf')
+```
 
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
